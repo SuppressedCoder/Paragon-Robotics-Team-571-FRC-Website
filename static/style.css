@@ -1,0 +1,184 @@
+/* -----------------------------
+   FONTS
+----------------------------- */
+@font-face {
+    font-family: colmeak;
+    src: url('/static/fonts/Colmeak.otf') format('opentype');
+}
+
+@font-face {
+    font-family: oasis;
+    src: url('/static/fonts/OASIS___.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: mont-heavy;
+    src: url('/static/fonts/Mont-Heavy.otf') format('opentype');
+}
+
+@font-face {
+    font-family: mont-extralight;
+    src: url('/static/fonts/Mont-ExtraLight.otf') format('opentype');
+}
+
+/* -----------------------------
+   ANIMATIONS
+----------------------------- */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim1 {
+    opacity: 0; /* start hidden */
+    animation: slideFadeIn 0.5s ease-out forwards;
+}
+
+.delay1 { animation-delay: 0.3s; }
+.delay2 { animation-delay: 0.6s; }
+.delay3 { animation-delay: 0.9s; }
+.delay4 { animation-delay: 1.2s; }
+
+/* -----------------------------
+   SLIDESHOW
+----------------------------- */
+#slideshow {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  margin: 2em auto;
+  overflow: hidden;
+}
+
+#slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* -----------------------------
+   GLOBAL STYLES
+----------------------------- */
+body {
+    background-color: #1E7DE9;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: serif;
+    text-align: center;
+    padding-block-start: 0.1em;
+    color: white;
+}
+
+/* -----------------------------
+   NAVBAR
+----------------------------- */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+#logo {
+    text-align: center;
+    font-family: mont-heavy, sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1em;
+}
+
+.nav-link {
+    font-family: mont-extralight, sans-serif;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    transition: background 0.2s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    align-items: flex-end;
+}
+
+/* -----------------------------
+   RESPONSIVE (MOBILE)
+----------------------------- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .hamburger {
+        order: 1;
+        margin-left: auto;
+        align-items: end;
+        display: block;
+    }
+
+    #logo {
+        order: 0;
+    }
+
+    .nav-links {
+        order: 2;
+        overflow: hidden;
+        max-height: 0;
+        padding: 0;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1em;
+        transition: max-height 0.5s ease;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        max-height: 18em; /* enough to fit all links */
+    }
+
+    .nav-link {
+        text-align: center;
+        width: 100%;
+        padding: 1em;
+    }
+}
