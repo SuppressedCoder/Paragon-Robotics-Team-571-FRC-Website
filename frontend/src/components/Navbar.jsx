@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../index.css";
 
 export default function Navbar() {
@@ -6,17 +7,17 @@ export default function Navbar() {
 
   return (
     <nav className="navbar anim1">
-      <a id="logo" href="/">Paragon Robotics</a>
+      <Link id="logo" to="/">Paragon Robotics</Link>
 
       <button className="hamburger" onClick={() => setOpen(!open)}>
         ☰
       </button>
 
       <div className={`nav-links ${open ? "active" : ""}`}>
-        <a className="nav-link" href="#">About Us</a>
-        <a className="nav-link" href="#">Projects</a>
-        <a className="nav-link" href="#">Contact Us</a>
-        <a className="nav-link" href="#">Donate</a>
+        <Link className="nav-link" to="/about">About Us</Link>
+        <Link className="nav-link" to="/projects">Projects</Link>
+        <Link className="nav-link" to="/contact">Contact Us</Link>
+        <Link className="nav-link" to="/donate">Donate</Link>
       </div>
     </nav>
   );
