@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
+import '../css/slideshow.css'
 
 export default function Slideshow() {
   const [images, setImages] = useState([]);
   const [index, setIndex] = useState(0);
+  const backendURL = `https://abroad-annual-performance-surface.trycloudflare.com`;
+
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/images")
+    fetch(backendURL + '/api/images')
       .then(res => res.json())
       .then(files => setImages(files))
       .catch(err => console.error(err));
@@ -20,7 +23,7 @@ export default function Slideshow() {
         nextIndex = Math.floor(Math.random() * images.length);
       } while (nextIndex === index); // prevent repeating the same image consecutively
       setIndex(nextIndex);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [images, index]);
@@ -34,7 +37,7 @@ export default function Slideshow() {
           key={i}
           className="slideshow-image"
           style={{
-            backgroundImage: `url(http://localhost:5000/images/${img})`,
+            backgroundImage: `url(${backendURL}/images/${img})`,
             opacity: i === index ? 0.6 : 0, // Transitions the opacity
           }}
         ></div>
