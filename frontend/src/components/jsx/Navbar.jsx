@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar anim1">
-      <Link id="logo" to="/"><span style={{color: "#cc7a0eff"}}>Paragon</span> <span style={{color:"#ffffff"}}>Robotics</span></Link>
+      <Link id="logo" to="/"><span style={{color: "#9e2000ff"}}>Paragon</span> <span style={{color:"#ffffff"}}>Robotics</span></Link>
 
       <button className="hamburger" onClick={() => setOpen(!open)}>
         ☰
