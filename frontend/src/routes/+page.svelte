@@ -6,7 +6,7 @@
 
 <div class="relative h-screen w-screen overflow-hidden">
   <!-- Background slideshow -->
-  <div class="absolute inset-0 -z-10">
+  <div class="absolute inset-0 -z-10 ">
     <Slideshow />
   </div>
 
