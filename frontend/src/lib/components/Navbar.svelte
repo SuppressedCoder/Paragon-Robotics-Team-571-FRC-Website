@@ -20,7 +20,7 @@
     <nav class="flex flex-col text-blue-500 font-mono text-md">
       <a href="/" class="hover:text-blue-300">Home</a>
       <a href="/subteams" class="hover:text-blue-300">Subteams</a>
-      <a href="/diamondscout" class="hover:text-blue-300">DiamondScout</a>
+      <a href="/diamond" class="hover:text-blue-300">DiamondScout</a>
     </nav>
   </div>
 </div>

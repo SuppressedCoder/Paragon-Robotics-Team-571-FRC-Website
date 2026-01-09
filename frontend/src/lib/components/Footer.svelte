@@ -3,11 +3,7 @@
 </script>
 
 <div class="bg-black/40 backdrop-blur-md p-8 flex items-center">
-  <img
-    src={tllogo}
-    alt="logo"
-    class="w-1/12 h-auto rounded-3xl bg-zinc-800 p-2"
-  />
+  <h2>&copy; 2026 Paragon Robotics</h2>
 
   <div class="rounded-3xl p-4 bg-zinc-800 ml-auto font-mono text-blue-500 text-2xl mr-8 text-right">
     Paragon Robotics
