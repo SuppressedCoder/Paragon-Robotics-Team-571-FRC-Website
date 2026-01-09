@@ -1,11 +1,9 @@
-<script>
-  import tllogo from "$lib/assets/textlesslogo.png";
-</script>
-
 <div class="bg-black/40 backdrop-blur-md p-8 flex items-center">
-  <h2>&copy; 2026 Paragon Robotics</h2>
+  <div class="rounded-3xl p-4 bg-zinc-800"> 
+    <h2 class="text-2xl text-white text-left">&copy; 2026 Paragon Robotics</h2>
+  </div>  
 
-  <div class="rounded-3xl p-4 bg-zinc-800 ml-auto font-mono text-blue-500 text-2xl mr-8 text-right">
+  <div class="rounded-3xl p-4 bg-zinc-800 ml-auto font-mono text-blue-500 text-xl mr-8 text-right">
     Paragon Robotics
     <br />
     20 William Street

@@ -17,7 +17,7 @@
       class="h-42 w-auto"
     />
 
-    <nav class="flex flex-col text-blue-500 font-mono text-md">
+    <nav class="flex flex-col text-blue-500 font-mono text-md text-2xl">
       <a href="/" class="hover:text-blue-300">Home</a>
       <a href="/subteams" class="hover:text-blue-300">Subteams</a>
       <a href="/diamond" class="hover:text-blue-300">DiamondScout</a>
