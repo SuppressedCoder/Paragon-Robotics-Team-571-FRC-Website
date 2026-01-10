@@ -22,7 +22,7 @@
     <nav class="flex flex-col text-blue-500 font-mono text-md text-2xl">
       <a href="/" class="hover:text-blue-300">Home</a>
       <a href="/subteams" class="hover:text-blue-300">Subteams</a>
-      <a href="/" class="hover:text-blue-300">Donate</a>
+      <a href="/sponsor" class="hover:text-blue-300">Sponsor</a>
       <a target="_blank" href="https://github.com/WindsorCT-Robotics/scouting" class="hover:text-blue-300">DiamondScout</a>
     </nav>
   </div>
