@@ -23,7 +23,7 @@
       <a href="/" class="hover:text-blue-300">Home</a>
       <a href="/subteams" class="hover:text-blue-300">Subteams</a>
       <a href="/sponsor" class="hover:text-blue-300">Sponsor</a>
-      <a target="_blank" href="https://github.com/WindsorCT-Robotics/scouting" class="hover:text-blue-300">DiamondScout</a>
+      <a target="_blank" href="https://github.com/WindsorCT-Robotics/DiamondScout" class="hover:text-blue-300">DiamondScout</a>
     </nav>
   </div>
 </div>
