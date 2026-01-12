@@ -2,7 +2,7 @@
   import { onMount, onDestroy } from "svelte";
 
   const modules = import.meta.glob(
-    "$lib/images/*.{jpeg,jpg,png,webp}",
+    "$lib/logos/platinum/*.{jpeg,jpg,png,webp}",
     { eager: true, import: "default" }
   );
 
@@ -14,19 +14,19 @@
   onMount(() => {
     interval = setInterval(() => {
       index = (index + 1) % images.length;
-    }, 4000);
+    }, 2600);
   });
 
   onDestroy(() => clearInterval(interval));
 </script>
 
-<div class="fixed inset-0 w-screen h-screen overflow-hidden bg-slate-950">
+<div class="relative w-full aspect-[2/1] overflow-hidden bg-slate-950">
   {#each images as img, i}
     <img
       alt="slideshow"
       src={img}
-      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 transition-transform duration-[4000ms]"
-      style="opacity: {i === index ? 1 : 0}; transform: scale({i === index ? 1.08 : 1});"
+      class="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000"
+      style="opacity: {i === index ? 1 : 0}"
     />
   {/each}
 </div>
